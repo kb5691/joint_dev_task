@@ -15,7 +15,6 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-  array = []
   array = array1 + array2
   p array
 end
@@ -31,6 +30,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
+  sports.compact!
 
   # 以下は変更しないで下さい
   p sports
@@ -41,13 +41,23 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  # 配列が空の場合はtrue
+  puts array1.size == 0
+  # 配列が1つ以上の場合はfalse
+  puts array2.size == 0
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
+  numbers2 = []
+  # numbers1を文字列に変換し、文字列 0 を連結
+  numbers1.each do |number1|
+    numbers2 << number1.to_s + "0"
+  end
+  # 配列の要素を文字列から数値に変換
+  p numbers2.map!(&:to_i)
 
 end
 
