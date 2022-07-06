@@ -42,23 +42,19 @@ def q5
 
   # 以下に回答を記載
   # 配列が空の場合はtrue
-  puts array1.size == 0
+  puts array1.empty?
   # 配列が1つ以上の場合はfalse
-  puts array2.size == 0
+  puts array2.empty?
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = []
-  # numbers1を文字列に変換し、文字列 0 を連結
-  numbers1.each do |number1|
-    numbers2 << number1.to_s + "0"
-  end
-  # 配列の要素を文字列から数値に変換
-  p numbers2.map!(&:to_i)
+  # 配列の要素をIntegerからStringに変換して "0" を追加し、Integerに戻して値を返す
+  numbers2 = numbers1.map { |number| (number.to_s + "0").to_i}
 
+  p numbers2
 end
 
 def q7
