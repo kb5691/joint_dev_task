@@ -51,8 +51,7 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  # 配列の要素をIntegerからStringに変換して "0" を追加し、Integerに戻して値を返す
-  numbers2 = numbers1.map { |number| (number.to_s + "0").to_i}
+  numbers2 = numbers1.map { |number| number * 10}
 
   p numbers2
 end
