@@ -130,9 +130,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  user_data.store(:age, update_data[:age])
-  user_data.store(:address, update_data[:address])
-  puts user_data
+  puts user_data.merge(update_data)
 
 end
 
